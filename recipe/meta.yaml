@@ -17,9 +17,12 @@ requirements:
     run: []
 test:
     commands:
-        - test -f ${PREFIX}/include/xtl/xbasic_fixed_string.hpp
-        - test -f ${PREFIX}/lib/cmake/xtl/xtlConfig.cmake
-        - test -f ${PREFIX}/lib/cmake/xtl/xtlConfigVersion.cmake
+        - if not exist %LIBRARY_INC%\\xtl\\xbasic_fixed_string.hpp exit 1        # [win]
+        - if not exist %LIBRARY_LIB%\\cmake\\xtl\\xtlConfig.cmake exit 1         # [win]
+        - if not exist %LIBRARY_LIB%\\cmake\\xtl\\xtlConfigVersion.cmake exit 1  # [win]
+        - test -f ${PREFIX}/include/xtl/xbasic_fixed_string.hpp                  # [unix]
+        - test -f ${PREFIX}/lib/cmake/xtl/xtlConfig.cmake                        # [unix]
+        - test -f ${PREFIX}/lib/cmake/xtl/xtlConfigVersion.cmake                 # [unix]
 about:
     description: Basic tools (containers, algorithms) used by other packages from
         Quantstack
