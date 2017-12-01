@@ -1,0 +1,38 @@
+package:
+    name: xtl
+    version: 0.3.6
+source:
+    fn: xtl-0.3.6.tar.gz
+    sha256: 37f5ba13d4e73d9ff74d9a01d72ec0a58ad237933ae2ccdba0746dbe325aadc3
+    url: https://github.com/QuantStack/xtl/archive/0.3.6.tar.gz
+build:
+    noarch: ''
+    noarch_python: false
+    number: '0'
+    string: '0'
+requirements:
+    build:
+        - cmake
+        - toolchain
+    run: []
+test:
+    commands:
+        - test -f ${PREFIX}/include/xtl/xbasic_fixed_string.hpp
+        - test -f ${PREFIX}/lib/cmake/xtl/xtlConfig.cmake
+        - test -f ${PREFIX}/lib/cmake/xtl/xtlConfigVersion.cmake
+about:
+    description: Basic tools (containers, algorithms) used by other packages from
+        Quantstack
+    dev_url: https://github.com/QuantStack/xtl
+    doc_url: http://xtl.readthedocs.io
+    home: http://quantstack.net
+    license: BSD 3-Clause
+    license_family: BSD
+    license_file: LICENSE
+    summary: The QuantStack tools library
+extra:
+    final: true
+    recipe-maintainers:
+        - SylvainCorlay
+        - JohanMabille
+        - gouarin
