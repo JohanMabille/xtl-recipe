@@ -3,7 +3,7 @@ package:
     version: 0.3.8
 source:
     fn: xtl-0.3.8.tar.gz
-    sha256: 37f5ba13d4e73d9ff74d9a01d72ec0a58ad237933ae2ccdba0746dbe325aadc3
+    sha256: 0e1fb2b979804acdee234484201b2d8d6767fd9bcfb2202e08d7d8fafba36cf4
     url: https://github.com/QuantStack/xtl/archive/0.3.8.tar.gz
 build:
     noarch: ''
