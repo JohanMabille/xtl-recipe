@@ -1,10 +1,10 @@
 package:
     name: xtl
-    version: 0.3.6
+    version: 0.3.8
 source:
-    fn: xtl-0.3.6.tar.gz
+    fn: xtl-0.3.8.tar.gz
     sha256: 37f5ba13d4e73d9ff74d9a01d72ec0a58ad237933ae2ccdba0746dbe325aadc3
-    url: https://github.com/QuantStack/xtl/archive/0.3.6.tar.gz
+    url: https://github.com/QuantStack/xtl/archive/0.3.8.tar.gz
 build:
     noarch: ''
     noarch_python: false
