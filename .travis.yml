@@ -5,7 +5,7 @@ env:
   matrix:
   - CONDA_PY=36
   global:
-  - secure: O5f/mpOp4i4yWAwJDxt7XfawEQff3gq3LUlgHqlrG+AvtWAfPN6H7z9Yqs3zC1HMcWsmpYxfKjGqU+ft5/vlVKAbU0cN8MC6ieKSwdvcsAI0j+icVh70e/AvbQ5qeOWeayW/B5WSXziYUK4/RwjAuOvai5bkH+XbSwNbGs1/zAkuL7sYP7ngbx/hUsJWw8Rs/AFgMgiWvxq4X3efnnrWt9OQc/XnjL78dk8fK+v3upio4DiCn1kD+vMsDwWMppgHZvY+JBwUza3oDvIYiWJ3Ekuoa/W2lLSiDolJJgYYqK1jeTQshcUO9K/Ey+SRO1pXlUPQ59uGyrNMqWbEv/OcRKT83ORItsGTVIVY5yie7KhpFbP4prKziFSI+Pjloqg5Ul+6wwotagi3Xgj3LSMHGVkoi4TL9Gm4OSiwCCtS8SK/7CQeXiYNwDlsjcI8MvJkONpvS4OYZsFNHiYnvwsjSIfWvZ0ruEOSQcQ6cBdcKcBFobB2CQcYQUylK/XeeQXn5XCL2DwE0/8RgZ4h9jxudFJjSwjPDF1obhffT/HD+vmgwtT625v+4Xi/KZcsUjah54iIzgsxL4YbAQCWm4y8gESrv3qYN8hfoA5d7hfg0oCjQn5i6iYNd2n5pytGRrCOCekHMDfqwHKenfzONDe1r1JSfT87g7ZSrVvzuwM3dA4=
+  - secure: F6Ob3PcK/dvIY+S6lMZCS/l/PS/klYhqtDBL4mi+BD76ToYy6yXmnUj+B8ZSSMwgT68t7bHjd/hBwHjvY8HkZQPO+PK7K/Pcyttym2IH6LiHcyfRVBs3utFxjyoN7ssRmIfv2UAOMaq6WPGBFAcGNDf7gtc3XZD9JvoK5DjFU6lrf2n9SMbGUC23iTbrkiVN2ws/v9qjU2U9v3E1J/vOTvE3M69qZ4VhgWS6KCl+FkOrqDF+IIf2PFIzC+qD8+tP/fNnJJROcc8eT2OSVhpCjsjrl1jXUqgOSkWg953LNiqDLmau8zRq8x7naup27x2o/5GMif5v69aGiaJs0A2X2WTOoR15qyNs0Ry8ru6rF6XYxSn1VyUdO3H5sm0tAwVv6IsfStn2yFBwTSq59YKQSG55HySl8gGhrSOXrs+mB1yuNA49ygD6Es5CCRndEigaCRovDaZ2DJ5uBrN3smr5ZfXE8qtXslLk/cXjH+VE3UDym3v+sOYJpEeXBd2LbNj8bdAl1zJLlmDblAkxCl439tF0ps27KKGgZDd48oO1S2vYkx2cqwgZu4kTyd6bEldXVgqYiKFgpjE+EjJ84M/xk6ccMpw3RLZCL6GufGDdBqw1EXHIxOBG1ghAmcvINUfpX3B8cruW3dcS4MsscepefOd9mvJlbnJkJV9dG7NgTgg=
 before_install:
 - |
   (curl https://raw.githubusercontent.com/conda-forge/conda-forge-build-setup-feedstock/master/recipe/ff_ci_pr_build.py | \
@@ -37,4 +37,4 @@ install:
   source run_conda_forge_build_setup
 script:
 - conda build ./recipe
-- upload_or_check_non_existence ./recipe gouarin --channel=main
+- upload_or_check_non_existence ./recipe QuantStack --channel=main
