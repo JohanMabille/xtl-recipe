@@ -12,12 +12,19 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  features:
+      - vc14  # [win]
+  noarch: ''
+  noarch_python: false
+  number: 1
+  skip: true  # [win and py<35]
 
 requirements:
   build:
     - toolchain
     - cmake
+  run:
+    - vc 14  # [win]
 
 test:
   commands:
