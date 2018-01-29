@@ -12,8 +12,6 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  features:
-      - vc14  # [win]
   noarch: ''
   noarch_python: false
   number: 1
@@ -23,8 +21,6 @@ requirements:
   build:
     - toolchain
     - cmake
-  run:
-    - vc 14  # [win]
 
 test:
   commands:
